@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFF | Survey</title>
+
+    <!--Linking to Bootstrap and external CSS-->
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1>Survey Questions</h1>
+        <hr class="my-4">
+        
+        <h2>About You</h2>
+        <hr class="my-4">
+
+            <p>Name (Required)</p>
+            <input class="form-control mb-4" type="text" placeholder="e.g. John Smith" required id="name">
+
+            <p>Link To Photo (Required)</p>
+            <input class="form-control" type="text" placeholder="e.g. myprofilephoto.com" required id="photo"> 
+        <hr class="my-4">
+        
+
+        <h2>Question 1</h2>
+
+            <p>Your mind is always buzzing with unexplored ideas and plans. (1 - Strongly disagree, 5 - Strongly agree)</p>
+        
+            <select class="form-control form-control-sm col-2 mb-4" id="question1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 2</h2>
+
+            <p>Generally speaking, you rely more on your experience than your imagination. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 3</h2>
+
+            <p>You find it easy to stay relaxed and focused even when their is some pressure. (1 - Strongly disagree, 5 - Strongly agree) </p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 4</h2>
+
+            <p>You rarely do something just out of sheer curiosity. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question4">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 5</h2>
+
+            <p>People can rarely upset you. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question5">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 6</h2>
+
+            <p>It is often difficult for you to relate to other people's feelings. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question6">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 7</h2>
+
+            <p>In an important discussion, truth should be more important than people's sensitivities. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question7">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 8</h2>
+
+            <p>You rarely get carried away by fantasies and ideas. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question8">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>1</option>
+            </select>
+
+        <h2>Question 9</h2>
+
+            <p>You think that everyone's views should be respected regardless of whether they are supported by facts or not. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question9">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+        <h2>Question 10</h2>
+
+            <p>You feel more energetic after spending time with a group of people. (1 - Strongly disagree, 5 - Strongly agree)</p>
+
+            <select class="form-control form-control-sm col-2 mb-4" id="question10">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option></option>
+            </select>
+
+        <button type="button" class="btn btn-primary col-12" id="findfriend">Find My Friend!</button>
+
+        <hr class="my-4">
+
+        <p>
+            <a href="/api/friends" >API Friends List</a> | 
+            <a href="https://github.com/rraj13/FriendFinder">Github Repo</a>
+        </p>
+    </div> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+
+        $("#findfriend").on("click", function() {
+            let name = $("#name").val();
+            let photo = $("#photo").val();
+            let q1 = $("#q1").val();
+
+            console.log(name, photo, q1);
+        });
+
+
+    
+    </script>
+
+</body>
+</html>
