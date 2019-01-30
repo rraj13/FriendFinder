@@ -8,8 +8,6 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const friends = require("./app/data/friends.js");
-
 // //requiring html routes to set paths to either home or survey site
 const htmlRoutes = require("./app/routing/htmlRoutes.js")(app);
 
