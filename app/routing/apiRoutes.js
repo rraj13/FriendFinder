@@ -18,9 +18,7 @@ module.exports = function(app) {
             let totalDifference = 0;
 
             for (let i = 0; i < newFriend.scores.length; i++) {
-                
                 totalDifference += Math.abs(comp[i] - newFriend.scores[i]);
-            
             }
 
             totalDifferenceValues.push(totalDifference);
@@ -39,13 +37,11 @@ module.exports = function(app) {
 
         let indexofMatch = totalDifferenceValues.indexOf(totalDifferenceComp);
 
-        let match = friends[indexofMatch].name;
-
-        console.log(match);
+        let match = friends[indexofMatch];
 
         friends.push(newFriend);
 
-        res.json(newFriend);
+        res.json(match);
     
     });
       

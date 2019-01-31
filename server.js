@@ -1,10 +1,10 @@
 const express = require("express");
-const path = require("path");
 
 var app = express();
 var PORT = 3000;
 
 //middleware integration
+app.use(express.static('app'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
